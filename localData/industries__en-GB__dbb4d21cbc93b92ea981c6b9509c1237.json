@@ -1,0 +1,39 @@
+{
+	"__": {
+		"entityPageSet": {
+			"plugin": {}
+		},
+		"name": "IndusriesPages",
+		"streamId": "industries",
+		"templateType": "JS"
+	},
+	"_site": {
+		"id": "universal",
+		"meta": {
+			"entityType": {
+				"id": "ce_globalData",
+				"uid": 139324
+			},
+			"locale": "en-GB"
+		},
+		"name": "Universal",
+		"uid": 1006533083
+	},
+	"businessId": 3737452,
+	"id": "industries-global-data",
+	"key": "0:IndusriesPages:knowledgeGraph:1006541485:en-GB",
+	"locale": "en-GB",
+	"meta": {
+		"entityType": {
+			"id": "ce_globalData",
+			"uid": 139324
+		},
+		"locale": "en-GB"
+	},
+	"name": "Industries",
+	"siteDomain": "",
+	"siteId": 0,
+	"siteInternalHostName": "",
+	"slug": "industries",
+	"uid": 1006541485
+}

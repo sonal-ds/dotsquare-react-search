@@ -1,0 +1,39 @@
+{
+	"__": {
+		"entityPageSet": {
+			"plugin": {}
+		},
+		"name": "ServicesPages",
+		"streamId": "Services",
+		"templateType": "JS"
+	},
+	"_site": {
+		"id": "universal",
+		"meta": {
+			"entityType": {
+				"id": "ce_globalData",
+				"uid": 139324
+			},
+			"locale": "en-GB"
+		},
+		"name": "Universal",
+		"uid": 1006533083
+	},
+	"businessId": 3737452,
+	"id": "services-global-data",
+	"key": "0:ServicesPages:knowledgeGraph:1006541481:en-GB",
+	"locale": "en-GB",
+	"meta": {
+		"entityType": {
+			"id": "ce_globalData",
+			"uid": 139324
+		},
+		"locale": "en-GB"
+	},
+	"name": "Services",
+	"siteDomain": "",
+	"siteId": 0,
+	"siteInternalHostName": "",
+	"slug": "services",
+	"uid": 1006541481
+}

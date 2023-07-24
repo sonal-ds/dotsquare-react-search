@@ -1,0 +1,23 @@
+{
+	"ExpertiesPages": [
+		"experties__en-GB__52b374da0ca17a64211e57bcb697cbc0.json"
+	],
+	"FaqPage": [
+		"faq__en-GB__9da36dac8c419fa72caea0e192e0276c.json"
+	],
+	"IndusriesPages": [
+		"industries__en-GB__dbb4d21cbc93b92ea981c6b9509c1237.json"
+	],
+	"LocationsPage": [
+		"location__en-GB__72a533da502851e68e939aa7e05b0f23.json"
+	],
+	"ServicesPages": [
+		"Services__en-GB__f3ec1d5676fd610aa250222820a3bb82.json"
+	],
+	"TechnologyPages": [
+		"technology__en-GB__5af49d4019f542b3a31f348fa80a8b91.json"
+	],
+	"search": [
+		"search__en-GB__604d0a2ef9b7d017ba5529b466e265a4.json"
+	]
+}

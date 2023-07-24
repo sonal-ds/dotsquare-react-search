@@ -1,0 +1,188 @@
+{
+  "features": [
+    {
+      "name": "ExpertiesPages",
+      "streamId": "experties",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "FaqPage",
+      "streamId": "faq",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "IndusriesPages",
+      "streamId": "industries",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "LocationsPage",
+      "streamId": "location",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "search",
+      "streamId": "search",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "ServicesPages",
+      "streamId": "Services",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    },
+    {
+      "name": "TechnologyPages",
+      "streamId": "technology",
+      "templateType": "JS",
+      "entityPageSet": {
+        "plugin": {}
+      }
+    }
+  ],
+  "streams": [
+    {
+      "$id": "experties",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "experties-globsl-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "faq",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "faq-global-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "industries",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "industries-global-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "location",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "location-global-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "search",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "universal"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "Services",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "services-global-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    },
+    {
+      "$id": "technology",
+      "fields": [
+        "name",
+        "slug"
+      ],
+      "filter": {
+        "entityIds": [
+          "technology-global-data"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en_GB"
+        ],
+        "primary": false
+      }
+    }
+  ]
+}

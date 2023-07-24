@@ -1,9 +1,1 @@
-node_modules/
-sites-rendered-output/
-localData/
-dist/
-.yext
-.artifact-output
-*.local
-*.zip
-.DS_Store
+node_modules
