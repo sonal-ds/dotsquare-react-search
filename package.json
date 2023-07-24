@@ -33,7 +33,7 @@
     "html-entities": "^2.3.5",
     "install": "^0.13.0",
     "marked": "^5.0.5",
-    "mdb-react-ui-kit": "^6.1.0",
+ 
     "moment-timezone": "^0.5.43",
     "npm": "^9.8.1",
     "react": "^17.0.2",
