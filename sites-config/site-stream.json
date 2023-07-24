@@ -1,0 +1,15 @@
+{
+  "$id": "ce_globalData",
+  "filter": {
+    "entityIds": ["universal"]
+  },
+  "source": "knowledgeGraph",
+  "fields": [
+    "name"
+    
+],
+  "localization": {
+    "locales": ["en_GB"],
+    "primary": false
+  }
+}
