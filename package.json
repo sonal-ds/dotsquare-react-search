@@ -24,8 +24,6 @@
     "@googlemaps/markerclusterer": "^2.2.1",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@material-tailwind/react": "^2.0.1",
-    "@react-google-maps/api": "^2.19.0",
-    "@szhsin/react-accordion": "^1.2.3",
     "@types/marked": "^5.0.0",
     "@yext/rtf-converter": "^1.7.1",
     "@yext/search-headless-react": "^2.2.0",
@@ -33,15 +31,11 @@
     "html-entities": "^2.3.5",
     "install": "^0.13.0",
     "marked": "^5.0.5",
- 
     "moment-timezone": "^0.5.43",
     "npm": "^9.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-google-maps": "^9.4.5",
-    "react-headless-accordion": "^1.0.2",
     "react-light-accordion": "^0.1.4",
-    "react-markdown": "^8.0.7",
     "react-modal": "^3.16.1"
   },
   "devDependencies": {

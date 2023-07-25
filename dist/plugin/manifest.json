@@ -31,6 +31,14 @@
       "file": "assets/static/cross-8afc84a3.svg",
       "src": "src/icons/cross.svg"
     },
+    "src/images/location.svg": {
+      "file": "assets/static/location-6fd7fe1b.svg",
+      "src": "src/images/location.svg"
+    },
+    "src/images/faq.svg": {
+      "file": "assets/static/faq-398119c6.svg",
+      "src": "src/images/faq.svg"
+    },
     "src/images/pin.svg": {
       "file": "assets/static/pin-195ff845.svg",
       "src": "src/images/pin.svg"
@@ -47,33 +55,25 @@
       "file": "assets/static/EurostileRegular-66b19661.woff2",
       "src": "src/Fonts/EurostileRegular.woff2"
     },
-    "src/images/search-line.svg": {
-      "file": "assets/static/search-line-aaa13248.svg",
-      "src": "src/images/search-line.svg"
-    },
     "src/Fonts/EurostileBold.woff2": {
       "file": "assets/static/EurostileBold-e748ef58.woff2",
       "src": "src/Fonts/EurostileBold.woff2"
+    },
+    "src/images/search-line.svg": {
+      "file": "assets/static/search-line-aaa13248.svg",
+      "src": "src/images/search-line.svg"
     },
     "src/images/select.svg": {
       "file": "assets/static/select-2239bf4e.svg",
       "src": "src/images/select.svg"
     },
-    "src/Fonts/EurostileBold.woff": {
-      "file": "assets/static/EurostileBold-1211e974.woff",
-      "src": "src/Fonts/EurostileBold.woff"
-    },
     "src/Fonts/EurostileRegular.woff": {
       "file": "assets/static/EurostileRegular-4fd28a37.woff",
       "src": "src/Fonts/EurostileRegular.woff"
     },
-    "src/images/location.svg": {
-      "file": "assets/static/location-6fd7fe1b.svg",
-      "src": "src/images/location.svg"
-    },
-    "src/images/faq.svg": {
-      "file": "assets/static/faq-398119c6.svg",
-      "src": "src/images/faq.svg"
+    "src/Fonts/EurostileBold.woff": {
+      "file": "assets/static/EurostileBold-1211e974.woff",
+      "src": "src/Fonts/EurostileBold.woff"
     },
     "src/templates/ExpertiesPages.tsx": {
       "file": "assets/server/ExpertiesPages.299dad4f.js",
