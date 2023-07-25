@@ -93,7 +93,7 @@ export default function LocationResults(data: props) {
             emails: location.emails,
             timezone: location.timezone,
             distance: enities.distance,
-            c_phoneNumberList: location.c_phoneNumberList,
+            phone: location.mainPhone,
           });
         }
       }

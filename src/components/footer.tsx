@@ -149,7 +149,7 @@ const Footer = ({ _site }: HeaderProps) => {
           <div className="footer_1">
             <div className="gm-footer-logo">
               <a
-                href="https://greenmotion.com/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >

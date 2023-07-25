@@ -14,6 +14,7 @@ import { getDirectionUrl } from "../commons/GetDirection";
 import { useComposedCssClasses } from "@yext/search-ui-react";
 import { twMerge } from "../../hooks/twMerge";
 import { silverMapStyle } from "../../config/answersHeadlessConfig";
+import Phone from "../commons/Phone";
 
 /**
  * CSS class interface for the {@link GoogleMaps} component
@@ -389,7 +390,7 @@ function UnwrappedGoogleMaps({
     } else {
       url = `${result.slug.toString()}`;
     }
-
+console.log(result,'result')
     const MarkerContent = (
       <>
         <div className="flex w-full flex-col max-w-[24rem] md:w-[22.5rem] font-main-font text-base address-with-availablity">
@@ -442,31 +443,14 @@ function UnwrappedGoogleMaps({
             </div>
           )}
 
-          {result?.c_phoneNumberList && (
-            <div className="address notHighlight items-center mt-3 phone_2">
-              {result?.c_phoneNumberList.map((item: any , index:number) => {
-                return (
-                  <React.Fragment key={index}>
-                    <div className="telephone">
-                      <svg
-                        width="19"
-                        height="19"
-                        viewBox="0 0 19 19"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12.5714 16.3778C6.74286 16.3778 2 11.6081 2 5.74657C2.00029 4.69826 2.3805 3.68599 3.06944 2.89927C3.75839 2.11256 4.70884 1.60532 5.74286 1.47254C6.05006 1.4339 6.36141 1.49719 6.62957 1.65277C6.89774 1.80836 7.10806 2.04774 7.22857 2.33453L8.66429 5.69629C8.75909 5.91427 8.79829 6.15261 8.77833 6.38968C8.75838 6.62675 8.67989 6.85507 8.55 7.05392L7.45 8.73481C7.93731 9.66092 8.69178 10.4171 9.61429 10.9041L11.2643 9.79793C11.4627 9.66612 11.6907 9.58596 11.9275 9.56465C12.1644 9.54333 12.4029 9.58153 12.6214 9.67581L15.9643 11.1196C16.2495 11.2408 16.4875 11.4524 16.6422 11.722C16.7969 11.9917 16.8599 12.3048 16.8214 12.6138C16.6894 13.6536 16.185 14.6095 15.4027 15.3023C14.6204 15.9951 13.6138 16.3775 12.5714 16.3778ZM5.74286 3.21807C5.16827 3.34287 4.65355 3.66188 4.28444 4.12196C3.91532 4.58204 3.7141 5.15542 3.71429 5.74657C3.71618 8.10833 4.64995 10.3728 6.31057 12.0428C7.9712 13.7129 10.223 14.6519 12.5714 14.6538C13.1593 14.654 13.7294 14.4516 14.1869 14.0804C14.6444 13.7092 14.9616 13.1916 15.0857 12.6138L12.0857 11.3208L10.4286 12.4342C10.2225 12.5713 9.98465 12.6526 9.73813 12.6703C9.49162 12.6879 9.24475 12.6412 9.02143 12.5347C7.63497 11.8595 6.51339 10.7366 5.83572 9.34538C5.72673 9.12195 5.67796 8.87368 5.69425 8.62536C5.71054 8.37704 5.79134 8.13737 5.92857 7.93028L7.02857 6.23503L5.74286 3.21807Z"
-                          fill="#304F00"
-                        />
-                      </svg>
-                    </div>
-                    <a href={`tel:${item}`}>{item}</a>
-                  </React.Fragment>
-                );
-              })}
-            </div>
-          )}
+         <Phone phone={result.phone} />
+        </div>
+        <div className="button-bx !ml-4 !mb-0">
+          {result.phone && 
+               <a className="cursor-pointer  getdirection btn" href={`tel:${result.phone}`}>
+                 CALL
+               </a>
+           }
         </div>
         <div className="button-bx !ml-4 !mb-0">
           {result.displayCoordinate ? (

@@ -1,6 +1,6 @@
 import { Result } from "@yext/search-headless-react";
 import { CardComponent, ResultsCountCssClasses } from "@yext/search-ui-react";
-import { LocationData } from "../../types/locations";
+import LocationData  from "../../types/locations";
 
 
 
@@ -36,9 +36,9 @@ export interface SectionConfig {
 
   export interface MapLocationData extends LocationData {
     timezone: any;
-    c_phoneNumberList: any;
     emails: any;
     slug: any;
+    mainPhone:number;
     yextDisplayCoordinate?: {
       latitude: number,
       longitude: number

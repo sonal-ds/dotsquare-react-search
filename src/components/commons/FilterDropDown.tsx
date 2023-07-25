@@ -22,7 +22,7 @@ const FilterDropDown: React.FC<ChildProps> = ({
             {conditionHeading && conditionHeading === "Show" ? (
               <>
                 <a
-                  href="https://greenmotion.com/"
+                  href="#"
                   target="_blank"
                   rel="noreferrer"
                 >
