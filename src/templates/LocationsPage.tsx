@@ -13,11 +13,7 @@ import {
   SearchHeadlessProvider,
   provideHeadless,
 } from "@yext/search-headless-react";
-import {
-  SpellCheck,
-  ResultsCount,
-  Pagination,
-} from "@yext/search-ui-react";
+import { SpellCheck, ResultsCount, Pagination } from "@yext/search-ui-react";
 import Navigation from "../components/search/Navigation";
 import { answersHeadlessConfig } from "../config/answersHeadlessConfig";
 import LocationResults from "../components/LocationResults";
@@ -101,40 +97,38 @@ const LocationsPage: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <React.Fragment>
       {/* <PageLayout _site={_site}> */}
-        <SearchHeadlessProvider searcher={searcher}>
-          <LocationProvider>
-            <div className="pb-12">
-              <div className="header-bg">
-                <div className="mx-auto flex max-w-[90rem] px-5 flex-col search_vertical">
-                  <YextSearchBar
-                    
-                    _site={_site}
-                    vertical={"locations"}
-                  />
-                  <Navigation />
+      <SearchHeadlessProvider searcher={searcher}>
+        <LocationProvider>
+          <div className="pb-12">
+            <div className="header-bg">
+              <div className="flex px-5 flex-col container-custom search_vertical">
+                <div className="yext-search-bar container-custom-small">
+                  <YextSearchBar _site={_site} vertical={"locations"} />
                 </div>
+                <Navigation />
               </div>
+            </div>
 
-              <div className="mx-auto flex max-w-[90rem] flex-col bg-white py-0 px-5 mt-6 pb-6 mb-6">
-                <ResultsCount
-                  customCssClasses={{ resultsCountContainer: "resultcount" }}
-                />
-                <section>
-                  {/* <DirectAnswer /> */}
-                  <SpellCheck />
-                  {/* <p className="nlpFilter">
+            <div className="flex flex-col container-custom-small bg-white py-0 px-5 mt-6 pb-6 mb-6">
+              <ResultsCount
+                customCssClasses={{ resultsCountContainer: "resultcount" }}
+              />
+              <section className="demo-1">
+                {/* <DirectAnswer /> */}
+                <SpellCheck />
+                {/* <p className="nlpFilter">
                     <AppliedFilters hiddenFields={["builtin.entityType"]} />
                   </p> */}
-                  <LocationResults
-                    verticalKey="locations"
-                    cardConfig={{ CardComponent: LocationCard }}
-                  />
-                </section>
-              </div>
-              <Pagination />
+                <LocationResults
+                  verticalKey="locations"
+                  cardConfig={{ CardComponent: LocationCard }}
+                />
+              </section>
             </div>
-          </LocationProvider>
-        </SearchHeadlessProvider>
+            <Pagination />
+          </div>
+        </LocationProvider>
+      </SearchHeadlessProvider>
       {/* </PageLayout> */}
     </React.Fragment>
   );

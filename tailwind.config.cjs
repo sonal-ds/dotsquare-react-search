@@ -43,6 +43,7 @@ module.exports = {
       'gray-dark': '#111111',
       'gray-light': '#ececec',
       'button-light': '#F5F5F7',
+      'platinum': '#E5E4E2',
       'border-light': '#B2B3B5',
       'seachbutton-bg': '#E8E8ED',
       'nav-link': '#747474',
@@ -67,12 +68,15 @@ module.exports = {
       'light-blue1': '#10cef0',
       'light-gray1': '#f2f2f2',
       'bg-hover': '#71cae8',
-
       'green-1': '#a2c62c',
       'green-2': '#10cef0',
+      'primaryOrange': '#f5821f',
+      'lightBlack': '#212121',
+      'textBlue': '#2c3e7e',
+      'grayBG': 'rgba(0,0,0,.03)',
     },
     fontFamily: {
-      'main-font': ['"Eurostile"'],
+      'primary': ['"Source Sans Pro"'],
       'second-font': ['"EurostileBold"'],
     },
     extend: {

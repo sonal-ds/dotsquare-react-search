@@ -18,7 +18,7 @@ interface SectionHeaderCssClasses extends AppliedFiltersCssClasses {
 }
 
 const builtInCssClasses: SectionHeaderCssClasses = {
-  sectionHeaderContainer: "flex items-center w-full pl-1 bg-green-2 p-3 mb-4",
+  sectionHeaderContainer: "flex items-center w-full pl-1 bg-primaryOrange p-3 rounded-tl-md rounded-tr-md",
   sectionHeaderIconContainer: "w-5 h-5",
   sectionHeaderLabel: "font-bold text-white text-xl uppercase pl-3",
   viewMoreContainer:
@@ -59,7 +59,7 @@ export default function SectionHeader(props: SectionHeaderConfig): JSX.Element {
   }
   if (entityTypes == "faq") {
     headImage = faqImage;
-  }
+  } 
  
   return (
     <div className={cssClasses.sectionHeaderContainer}>

@@ -35,7 +35,7 @@ interface NavigationCssClasses {
 }
 
 const builtInCssClasses: NavigationCssClasses = {
-  nav: "vertical-navigation",
+  nav: "vertical-navigation container-custom-small",
   navLinkContainer: "vertical-navigation-item",
   navLink: "vertical-nav-link",
   navLinkContainer___active: "active",

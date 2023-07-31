@@ -134,7 +134,7 @@ console.log(clear,'clear')
     <React.Fragment>
      
       <SearchBar
-        placeholder="Search Your Query Here"
+        placeholder="Search for Technology"
         onSearch={(response: { query: string; }) => {
           if (response.query) {
             const country = constant.getCountryName();

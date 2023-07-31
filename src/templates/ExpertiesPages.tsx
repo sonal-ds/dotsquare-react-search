@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import {
   Template,
@@ -14,18 +13,13 @@ import {
   SearchHeadlessProvider,
   provideHeadless,
 } from "@yext/search-headless-react";
-import {
-  SpellCheck,
-  ResultsCount,
-  Pagination,
-} from "@yext/search-ui-react";
+import { SpellCheck, ResultsCount, Pagination } from "@yext/search-ui-react";
 import Navigation from "../components/search/Navigation";
 import { answersHeadlessConfig } from "../config/answersHeadlessConfig";
 import VerticalResults from "../components/search/VerticalResults";
 import YextSearchBar from "../components/search/YextSearchBar";
 import { favicon } from "../sites-global/global";
 import EcpertiesCard from "../components/cards/EcpertiesCard";
-
 
 export const config: TemplateConfig = {
   stream: {
@@ -100,40 +94,36 @@ const ExpertiesPages: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <React.Fragment>
       {/* <PageLayout _site={_site}> */}
-        <SearchHeadlessProvider searcher={searcher}>
-          <div className="pb-12">
-            <div className="header-bg">
-              <div className="mx-auto flex max-w-[90rem] px-5 flex-col search_vertical">
-                <YextSearchBar
-                 
-                  _site={_site}
-                  vertical={"experties"}
-                />
-                <Navigation />
+      <SearchHeadlessProvider searcher={searcher}>
+        <div className="pb-12">
+          <div className="header-bg">
+            <div className="flex px-5 flex-col container-custom search_vertical">
+              <div className="yext-search-bar container-custom-small">
+                <YextSearchBar _site={_site} vertical={"experties"} />
               </div>
+              <Navigation />
             </div>
-            <div>
-             
-            </div>
-            <div className="mx-auto flex max-w-[90rem] flex-col bg-white py-0 px-5 mt-6 pb-6 mb-6">
-              <ResultsCount
-                customCssClasses={{ resultsCountContainer: "resultcount-faq" }}
-              />
-              <section>
-                {/* <DirectAnswer /> */}
-                <SpellCheck />
-                {/* <p className="nlpFilter">
+          </div>
+          <div></div>
+          <div className=" flex container-custom-small flex-col bg-white py-0 px-5 mt-6 pb-6 mb-6">
+            <ResultsCount
+              customCssClasses={{ resultsCountContainer: "resultcount-faq" }}
+            />
+            <section className="demo-1">
+              {/* <DirectAnswer /> */}
+              <SpellCheck />
+              {/* <p className="nlpFilter">
                   <AppliedFilters hiddenFields={["builtin.entityType"]} />
                 </p> */}
-                <VerticalResults
-                  CardComponent={EcpertiesCard}
-                  displayAllOnNoResults={false}
-                />
-              </section>
-            </div>
-            <Pagination />
+              <VerticalResults
+                CardComponent={EcpertiesCard}
+                displayAllOnNoResults={false}
+              />
+            </section>
           </div>
-        </SearchHeadlessProvider>
+          <Pagination />
+        </div>
+      </SearchHeadlessProvider>
       {/* </PageLayout> */}
     </React.Fragment>
   );
