@@ -98,30 +98,28 @@ const Search: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <>
       {/* <PageLayout _site={_site}> */}
-        <SearchHeadlessProvider searcher={searcher}>
-          <div className="pb-12">
-            <div className="header-bg">
-              <div className="mx-auto flex max-w-[90rem] px-5 flex-col search_vertical">
-                <YextSearchBar
-                 
-                  universal="index"
-                  _site={_site}
-                />
-                <Navigation />
+      <SearchHeadlessProvider searcher={searcher}>
+        <div className="pb-12">
+          <div className="header-bg">
+            <div className="flex px-5 flex-col container-custom search_vertical">
+              <div className="yext-search-bar container-custom-small">
+                <YextSearchBar universal="index" _site={_site} />
               </div>
+              <Navigation />
             </div>
-            <div className="mx-auto flex max-w-[90rem] flex-col bg-white py-0 px-5 mt-6 pb-6">
-              <SpellCheck />
-              {/* <DirectAnswer /> */}
-              <UniversalResults
-                appliedFiltersConfig={universalResultsFilterConfig}
-                verticalConfigs={universalResultsConfig}
-              />
-            </div>
-            <Pagination />
           </div>
-          <LocationBias/>
-        </SearchHeadlessProvider>
+          <div className="flex flex-col container-custom-small bg-white py-0 px-5 mt-6 pb-6">
+            <SpellCheck />
+            {/* <DirectAnswer /> */}
+            <UniversalResults
+              appliedFiltersConfig={universalResultsFilterConfig}
+              verticalConfigs={universalResultsConfig}
+            />
+          </div>
+          <Pagination />
+        </div>
+        <LocationBias />
+      </SearchHeadlessProvider>
       {/* </PageLayout> */}
     </>
   );

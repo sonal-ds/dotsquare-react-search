@@ -8,8 +8,8 @@ import {
   SectionComponent,
   useComposedCssClasses,
 } from "@yext/search-ui-react";
-import {CompositionMethod } from "../interface/interface";
-import {CardConfig} from "../../models/cardComponent"
+import { CompositionMethod } from "../interface/interface";
+import { CardConfig } from "../../models/cardComponent";
 
 interface UniversalResultsCssClasses {
   container?: string;
@@ -17,7 +17,7 @@ interface UniversalResultsCssClasses {
 }
 
 const builtInCssClasses: UniversalResultsCssClasses = {
-  container: "space-y-8 mt-6",
+  container: "mt-6",
   results___loading: "opacity-50",
 };
 
@@ -57,15 +57,14 @@ export default function UniversalResults({
   const resultsClassNames = classNames(cssClasses.container, {
     [cssClasses.results___loading ?? ""]: isLoading,
   });
-  
-  return  typeof sessionStorage == "undefined" && 
-  resultsFromAllVerticals &&
+
+  return typeof sessionStorage == "undefined" &&
+    resultsFromAllVerticals &&
     resultsFromAllVerticals.length === 0 ? (
-   
-     <div className="mb-6 pb-6 mt-6 pt-6">
-       <p className="text-2xl font-bold">No results found</p>
-       { console.log("np")}
-     </div>
+    <div className="mb-6 pb-6 mt-6 pt-6">
+      <p className="text-2xl font-bold">No results found</p>
+      {console.log("np")}
+    </div>
   ) : (
     <div className={resultsClassNames}>
       {renderVerticalSections({
@@ -97,20 +96,19 @@ function renderVerticalSections(props: VerticalSectionsProps): JSX.Element {
   const faqResults = resultsFromAllVerticals
     .filter((verticalResults) => verticalResults.results)
     .find((e) => e.verticalKey === "faqs");
-    const technologyResult = resultsFromAllVerticals
+  const technologyResult = resultsFromAllVerticals
     .filter((verticalResults) => verticalResults.results)
     .find((e) => e.verticalKey === "technology_");
-    const servicesResults = resultsFromAllVerticals
+  const servicesResults = resultsFromAllVerticals
     .filter((verticalResults) => verticalResults.results)
     .find((e) => e.verticalKey === "services");
-    const industriesResults = resultsFromAllVerticals
+  const industriesResults = resultsFromAllVerticals
     .filter((verticalResults) => verticalResults.results)
     .find((e) => e.verticalKey === "industries");
-    const expertiesResults = resultsFromAllVerticals
+  const expertiesResults = resultsFromAllVerticals
     .filter((verticalResults) => verticalResults.results)
     .find((e) => e.verticalKey === "experties");
-    
- 
+
   if (locationResults) {
     sortedResultFromAllVerticals.push(locationResults);
   }
@@ -129,7 +127,7 @@ function renderVerticalSections(props: VerticalSectionsProps): JSX.Element {
   if (expertiesResults) {
     sortedResultFromAllVerticals.push(expertiesResults);
   }
-  
+
   return (
     <>
       {sortedResultFromAllVerticals.map((verticalResults) => {
@@ -175,26 +173,27 @@ function renderVerticalSections(props: VerticalSectionsProps): JSX.Element {
               cardConfig={verticalConfig.cardConfig}
               key={verticalKey}
             />
-            <a
-              className="bottom_link"
-              href={`/${verticalKey}${
-                latestQuery ? `?query=${latestQuery}` : ""
-              }`}
-            >
-              View all
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 11 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="text-center py-3 border border-platinum border-t-0 mb-11 rounded-br-md rounded-bl-md">
+              <a
+                className="view-all"
+                href={`/${verticalKey}${
+                  latestQuery ? `?query=${latestQuery}` : ""
+                }`}
               >
-                <path
-                  d="M10.9134 5.31371L5.72793 10.4992L4.78512 9.55635L9.02776 5.31371L4.78512 1.07107L5.72793 0.128259L10.9134 5.31371ZM6.19934 5.31371L1.01389 10.4992L0.0710796 9.55635L4.31372 5.31371L0.0710788 1.07107L1.01389 0.12826L6.19934 5.31371Z"
-                  fill="#586249"
-                />
-              </svg>
-            </a>
+                View all
+                <svg
+                  width="10px"
+                  height="10px"
+                  viewBox="0 0 7 9"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#f5821f"
+                >
+                  <g fillRule="evenodd" transform="translate(-1 -8)">
+                    <path d="m2.6417004 8-1.1417004 1.0575 3.70850202 3.4425-3.70850202 3.4425 1.1417004 1.0575 4.8582996-4.5z"></path>
+                  </g>
+                </svg>
+              </a>
+            </div>
           </>
         );
       })}

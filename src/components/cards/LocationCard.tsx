@@ -21,7 +21,7 @@ const LocationCard: CardComponent<LocationData> = ({
   };
   const phoneNumberList = data.c_phoneNumberList as string[];
   return (
-    <div
+    <li
       className={`location result-list-inner-${data.id} result`}
       id={`result-${data.id}`}
     >
@@ -29,12 +29,9 @@ const LocationCard: CardComponent<LocationData> = ({
         <div className="center-column">
           <div className="lp-param-results lp-subparam-hours">
             <div className="location-name-miles icon-row">
-              <h2>
-
-                  {name}
-              
-              </h2>
-              {result?.distance && (
+              <h2>{name}</h2>
+              {/* Miles code */}
+              {/* {result?.distance && (
                 <span>
                   <svg
                     width="8"
@@ -57,25 +54,12 @@ const LocationCard: CardComponent<LocationData> = ({
                   </svg>
                   {metersToMiles(result?.distance)}
                 </span>
-              )}
+              )} */}
+              {/* Miles code */}
             </div>
             <div className="address-with-sperate">
               <div className="icon-row content-col address-with-availablity">
                 <div className="address">
-                  <div className="location-icon notHighlight">
-                    <svg
-                      width="13"
-                      height="17"
-                      viewBox="0 0 13 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6.14285 2.06484C7.81904 2.06484 9.19046 3.44402 9.19046 5.12969C9.19046 6.73874 7.59046 9.34386 6.14285 11.1828C4.69523 9.26724 3.09523 6.73874 3.09523 5.12969C3.09523 3.44402 4.46666 2.06484 6.14285 2.06484ZM6.14285 0.53241C3.62856 0.53241 1.57142 2.60119 1.57142 5.12969C1.57142 8.57765 6.14285 13.558 6.14285 13.558C6.14285 13.558 10.7143 8.50103 10.7143 5.12969C10.7143 2.60119 8.65713 0.53241 6.14285 0.53241ZM6.14285 3.59726C5.30475 3.59726 4.61904 4.28685 4.61904 5.12969C4.61904 5.97252 5.30475 6.66212 6.14285 6.66212C6.98094 6.66212 7.66666 5.97252 7.66666 5.12969C7.66666 4.28685 6.98094 3.59726 6.14285 3.59726ZM12.2381 13.558C12.2381 15.2437 9.49523 16.6229 6.14285 16.6229C2.79046 16.6229 0.0476074 15.2437 0.0476074 13.558C0.0476074 12.562 0.961893 11.7191 2.40951 11.1062L2.86665 11.7957C2.10475 12.1789 1.57142 12.6386 1.57142 13.1749C1.57142 14.2476 3.62856 15.0905 6.14285 15.0905C8.65713 15.0905 10.7143 14.2476 10.7143 13.1749C10.7143 12.6386 10.1809 12.1789 9.34285 11.7957L9.79999 11.1062C11.3238 11.7191 12.2381 12.562 12.2381 13.558Z"
-                        fill="#304F00"
-                      />
-                    </svg>
-                  </div>
                   <Address address={address} />
                 </div>
 
@@ -103,7 +87,7 @@ const LocationCard: CardComponent<LocationData> = ({
 
                 {phoneNumberList && (
                   <div className="address notHighlight items-center mt-3 phone_2">
-                    {phoneNumberList.map((item: any , index:number) => {
+                    {phoneNumberList.map((item: any, index: number) => {
                       return (
                         <React.Fragment key={index}>
                           <div className="telephone">
@@ -126,25 +110,32 @@ const LocationCard: CardComponent<LocationData> = ({
                     })}
                   </div>
                 )}
-                 <Phone phone={data.mainPhone} />
+                <Phone phone={data.mainPhone} />
               </div>
-              <div>
-              {data.hours ?
-               <OpenCloseStatus hours={data.hours} timezone={data.timezone} site={answersHeadlessConfig.locale}/>: ""}
-                 </div>
-                 {/*  */}
+              <div className="grow">
+                {data.hours ? (
+                  <OpenCloseStatus
+                    hours={data.hours}
+                    timezone={data.timezone}
+                    site={answersHeadlessConfig.locale}
+                  />
+                ) : (
+                  ""
+                )}
+              </div>
+              {/*  */}
               <div className="facility_1">
                 <div className="button-bx">
-                  <div className="btn-dir">
-                  <Link
-         className=" btn notHighlight btn-store"
-        data-ya-track="phone"
-        eventName="phone"
-        href={`tel:${phone}`}
-        rel="noopener noreferrer"
-      >
-       CALL
-      </Link>
+                  <div className="button-group text-right">
+                    <Link
+                      className=" button ghost-button rounded-md notHighlight"
+                      data-ya-track="phone"
+                      eventName="phone"
+                      href={`tel:${phone}`}
+                      rel="noopener noreferrer"
+                    >
+                      CALL
+                    </Link>
                     {data.displayCoordinate ? (
                       <GetDirection
                         buttonText={StaticData.getDirection}
@@ -167,7 +158,7 @@ const LocationCard: CardComponent<LocationData> = ({
           </div>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 

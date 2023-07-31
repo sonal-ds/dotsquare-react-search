@@ -393,7 +393,7 @@ function UnwrappedGoogleMaps({
 console.log(result,'result')
     const MarkerContent = (
       <>
-        <div className="flex w-full flex-col max-w-[24rem] md:w-[22.5rem] font-main-font text-base address-with-availablity">
+        <div className="flex w-full flex-col max-w-[24rem] md:w-[22.5rem] font-primary text-base address-with-availablity">
           <div className="location-name-miles">
             <h2>
               <Link className="inline-block notHighlight" href={result?.slug}>

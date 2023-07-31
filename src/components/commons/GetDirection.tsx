@@ -49,7 +49,7 @@ const GetDirection = (props: any) => {
       <Link
         data-ya-track="getdirections"
         eventName={`getdirections`}
-        className="btn notHighligh"
+        className="button ghost-button rounded-md"
         href={getDirectionUrl(address)}
         rel="noopener noreferrer"
         target="_blank"

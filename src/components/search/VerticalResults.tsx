@@ -33,10 +33,10 @@ export function VerticalResultsDisplay(
     return null;
   } else {
     return (
-      <div className={entityTypes + " grid-product"}>
+      <ul className={entityTypes + " grid-product"}>
         {results &&
           results.map((result) => renderResult(CardComponent, result))}
-      </div>
+      </ul>
     );
   }
 }
