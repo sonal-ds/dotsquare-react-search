@@ -120,11 +120,9 @@ const LocationsPage: Template<TemplateRenderProps> = ({ document }) => {
                   customCssClasses={{ resultsCountContainer: "resultcount" }}
                 />
                 <section>
-                  {/* <DirectAnswer /> */}
+                 
                   <SpellCheck />
-                  {/* <p className="nlpFilter">
-                    <AppliedFilters hiddenFields={["builtin.entityType"]} />
-                  </p> */}
+               
                   <LocationResults
                     verticalKey="locations"
                     cardConfig={{ CardComponent: LocationCard }}

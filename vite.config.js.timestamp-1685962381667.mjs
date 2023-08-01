@@ -1,7 +1,7 @@
 // vite.config.js
-import { defineConfig } from "file:///C:/Users/admin/Desktop/greenmotion-repo/green-motion/node_modules/vite/dist/node/index.js";
-import react from "file:///C:/Users/admin/Desktop/greenmotion-repo/green-motion/node_modules/@vitejs/plugin-react/dist/index.mjs";
-import yextSSG from "file:///C:/Users/admin/Desktop/greenmotion-repo/green-motion/node_modules/@yext/pages/dist/vite-plugin/plugin.js";
+import { defineConfig } from "file:///C:/Users/admin/Desktop/dotsquares-repo/Dotsquares-Search/node_modules/vite/dist/node/index.js";
+import react from "file:///C:/Users/admin/Desktop/dotsquares-repo/Dotsquares-Search/node_modules/@vitejs/plugin-react/dist/index.mjs";
+import yextSSG from "file:///C:/Users/admin/Desktop/dotsquares-repo/Dotsquares-Search/node_modules/@yext/pages/dist/vite-plugin/plugin.js";
 var vite_config_default = defineConfig({
   plugins: [react(), yextSSG()]
 });
