@@ -109,7 +109,7 @@ const IndusriesPages: Template<TemplateRenderProps> = ({ document }) => {
             <ResultsCount
               customCssClasses={{ resultsCountContainer: "resultcount-faq" }}
             />
-            <section className="demo-1">
+            <section className="industries-section">
               {/* <DirectAnswer /> */}
               <SpellCheck />
               {/* <p className="nlpFilter">

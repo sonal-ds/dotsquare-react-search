@@ -113,7 +113,7 @@ const LocationsPage: Template<TemplateRenderProps> = ({ document }) => {
               <ResultsCount
                 customCssClasses={{ resultsCountContainer: "resultcount" }}
               />
-              <section className="demo-1">
+              <section className="location-section">
                 {/* <DirectAnswer /> */}
                 <SpellCheck />
                 {/* <p className="nlpFilter">
